@@ -33,23 +33,26 @@ namespace FI.WebAtividadeEntrevista.Controllers
                                       select error.ErrorMessage).ToList();
 
                 Response.StatusCode = 400;
-                return Json(string.Join(Environment.NewLine, erros));
+                return Json(new { mensagem = string.Join(Environment.NewLine, erros) });
             }
             else
             {
                 var existeBeneficiario = boBeneficiario.VerificarBeneficiario(model.CPF, model.IdCliente);
 
                 if (existeBeneficiario)
-                    return Json("Já existe um beneficiario cadastrado com este CPF para este cliente");
+                {
+                    Response.StatusCode = 400;
+                    return Json(new { mensagem = "Já existe um beneficiário cadastrado com este CPF para este cliente" });
+                }
 
-                 model.Id = boBeneficiario.Incluir(new Beneficiario
+                model.Id = boBeneficiario.Incluir(new Beneficiario
                 {
                     Nome = model.Nome,
                     CPF = model.CPF,
                     IdCliente = model.IdCliente
                 });
 
-                return Json("Beneficiario cadastrado com sucesso!");
+                return Json(new { mensagem = "Beneficiário cadastrado com sucesso!" });
             }
         }
 

@@ -1,5 +1,4 @@
 $(document).ready(function (e) {
-    console.log("CHAMADO")
     $('#formCadastroBeneficiario').submit(function (e) {
         e.preventDefault();
         const postUrl = $(this).data('urlpost');
@@ -12,16 +11,18 @@ $(document).ready(function (e) {
                 "IDCLIENTE": $(this).find("#IDCLIENTE").val()
             },
             error: function (r) {
-                if (r.status == 400)
-                    ModalDialog("Ocorreu um erro", r.responseJSON);
-                else if (r.status == 500)
+                console.log("BATEU AQUI")
+                if (r.status === 400) {
+                    // Captura a mensagem de erro do JSON retornado
+                    const errorMessage = r.responseJSON.mensagem || "Ocorreu um erro";
+                    ModalDialog("Ocorreu um erro", errorMessage);
+                } else if (r.status === 500) {
                     ModalDialog("Ocorreu um erro", "Ocorreu um erro interno no servidor");
+                }
             },
             success: function (r) {
-                ModalDialog("Sucesso!", "O beneficiario foi cadastrado com sucesso!");
-
+                ModalDialog("Sucesso!", r.mensagem); // Exibe a mensagem de sucesso
                 $('#modalBeneficiarios').modal('hide');
-
                 $('#formCadastroBeneficiario')[0].reset();
             }
         });

@@ -15,12 +15,12 @@ $(document).ready(function () {
                 "IDCLIENTE": $('#IDCLIENTE').val()
             },
             success: function () {
-                alert("Beneficiário incluído com sucesso!");
+                alert("Beneficiario incluido com sucesso!");
                 $('#formCadastroBeneficiario')[0].reset();
                 carregarBeneficiarios($('#IDCLIENTE').val());
             },
-            error: function () {
-                alert("Erro ao incluir beneficiário.");
+            error: function (e) {
+                alert(e.responseJSON.mensagem);
             }
         });
     });
