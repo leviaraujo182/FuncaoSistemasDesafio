@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|c:\\users\\levia\\onedrive\\documentos\\funcaosistemas\\fi.webatividadeentrevista\\fi.webatividadeentrevista\\controllers\\beneficiariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|solutionrelative:fi.webatividadeentrevista\\controllers\\beneficiariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\fi.webatividadeentrevista\\scripts\\beneficiarios\\fi.listarbeneficiarios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|solutionrelative:fi.webatividadeentrevista\\scripts\\beneficiarios\\fi.listarbeneficiarios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\fi.webatividadeentrevista\\views\\cliente\\forms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|solutionrelative:fi.webatividadeentrevista\\views\\cliente\\forms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\fi.webatividadeentrevista\\views\\cliente\\incluir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|solutionrelative:fi.webatividadeentrevista\\views\\cliente\\incluir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\fi.webatividadeentrevista\\scripts\\beneficiarios\\fi.beneficiarios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDA04BC2-EFC2-487F-8F40-A95C652F6A15}|FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista.csproj|solutionrelative:fi.webatividadeentrevista\\scripts\\beneficiarios\\fi.beneficiarios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FI.ListarBeneficiarios.js",
+              "DocumentMoniker": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.ListarBeneficiarios.js",
+              "RelativeDocumentMoniker": "FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.ListarBeneficiarios.js",
+              "ToolTip": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.ListarBeneficiarios.js",
+              "RelativeToolTip": "FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.ListarBeneficiarios.js",
+              "ViewState": "AgIAADwAAAAAAAAAAADwvyQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-08T13:29:49.364Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BeneficiarioController.cs",
+              "DocumentMoniker": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Controllers\\BeneficiarioController.cs",
+              "RelativeDocumentMoniker": "FI.WebAtividadeEntrevista\\Controllers\\BeneficiarioController.cs",
+              "ToolTip": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Controllers\\BeneficiarioController.cs",
+              "RelativeToolTip": "FI.WebAtividadeEntrevista\\Controllers\\BeneficiarioController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T17:27:24.822Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Forms.cshtml",
+              "DocumentMoniker": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Views\\Cliente\\Forms.cshtml",
+              "RelativeDocumentMoniker": "FI.WebAtividadeEntrevista\\Views\\Cliente\\Forms.cshtml",
+              "ToolTip": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Views\\Cliente\\Forms.cshtml",
+              "RelativeToolTip": "FI.WebAtividadeEntrevista\\Views\\Cliente\\Forms.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-08T17:27:11.847Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Incluir.cshtml",
+              "DocumentMoniker": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Views\\Cliente\\Incluir.cshtml",
+              "RelativeDocumentMoniker": "FI.WebAtividadeEntrevista\\Views\\Cliente\\Incluir.cshtml",
+              "ToolTip": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Views\\Cliente\\Incluir.cshtml",
+              "RelativeToolTip": "FI.WebAtividadeEntrevista\\Views\\Cliente\\Incluir.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-08T20:13:26.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FI.Beneficiarios.js",
+              "DocumentMoniker": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.Beneficiarios.js",
+              "RelativeDocumentMoniker": "FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.Beneficiarios.js",
+              "ToolTip": "C:\\Users\\levia\\OneDrive\\Documentos\\FuncaoSistemas\\FI.WebAtividadeEntrevista\\FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.Beneficiarios.js",
+              "RelativeToolTip": "FI.WebAtividadeEntrevista\\Scripts\\Beneficiarios\\FI.Beneficiarios.js",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-08T20:05:51.15Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

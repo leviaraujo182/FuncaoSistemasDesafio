@@ -1,0 +1,9 @@
+CREATE PROCEDURE [dbo].[FI_SP_ExcluirBeneficiario]
+    @ID BIGINT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM [dbo].[BENEFICIARIOS]
+    WHERE ID = @ID;
+END;
