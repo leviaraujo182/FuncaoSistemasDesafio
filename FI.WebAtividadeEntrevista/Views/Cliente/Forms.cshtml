@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h5 class="modal-title">Beneficiários</h5>
             </div>
             <div class="modal-body">
@@ -49,6 +49,7 @@
         </div>
     </div>
 </div>
+
 
 <form id="formCadastro" method="post">
     <div class="row">
@@ -144,11 +145,10 @@
 
 
 <script>
-    document.getElementById('CPF').addEventListener('input', function (e) {
+    function formatCPF(e) {
         let cpf = e.target.value.replace(/\D/g, '');
         if (cpf.length > 11) cpf = cpf.substring(0, 11);
 
-        // Aplica a máscara manualmente
         if (cpf.length > 9) {
             cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
         } else if (cpf.length > 6) {
@@ -158,5 +158,9 @@
         }
 
         e.target.value = cpf;
-    });
+    }
+
+    document.getElementById('CPF').addEventListener('input', formatCPF);
+    document.getElementById('cpfBeneficiario').addEventListener('input', formatCPF);
+
 </script>

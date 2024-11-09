@@ -12,6 +12,7 @@ namespace FI.WebAtividadeEntrevista.Models
 
         public string Nome { get; set; }
 
+        [CPFValidation]
         public string CPF { get; set; }
 
         public long IdCliente { get; set; }

@@ -9,7 +9,6 @@ public class CPFValidationAttribute : ValidationAttribute
         if (value == null)
             return false;
 
-        // Remove caracteres de pontuação do CPF
         var cpf = Regex.Replace(value.ToString(), @"[^\d]", "");
 
         if (cpf.Length != 11 || !long.TryParse(cpf, out _))
@@ -41,5 +40,20 @@ public class CPFValidationAttribute : ValidationAttribute
         int digit2 = remainder < 2 ? 0 : 11 - remainder;
 
         return cpf[9] - '0' == digit1 && cpf[10] - '0' == digit2;
+    }
+
+    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    {
+        if (value != null)
+        {
+            var cleanCpf = Regex.Replace(value.ToString(), @"\D", "");
+            var property = validationContext.ObjectType.GetProperty(validationContext.MemberName);
+            if (property != null && property.CanWrite)
+            {
+                property.SetValue(validationContext.ObjectInstance, cleanCpf, null);
+            }
+        }
+
+        return IsValid(value) ? ValidationResult.Success : new ValidationResult("CPF inválido.");
     }
 }
