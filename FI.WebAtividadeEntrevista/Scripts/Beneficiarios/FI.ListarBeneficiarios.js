@@ -36,8 +36,6 @@ $(document).ready(function () {
         const cpf = $('#cpfBeneficiario').val();
         const nome = $('#nomeBeneficiario').val();
 
-        console.log("BENEFICIARIO:", idBeneficiario)
-
         $.ajax({
             url: `/Beneficiario/Atualizar`,
             method: 'POST',
@@ -48,7 +46,7 @@ $(document).ready(function () {
                 Nome: nome,
             },
             success: function () {
-                alert("Beneficiário atualizado com sucesso!");
+                alert("Beneficiario atualizado com sucesso!");
                 $('#formCadastroBeneficiario')[0].reset();
                 toggleButtons(false);
                 carregarBeneficiarios($('#IDCLIENTE').val());
@@ -69,9 +67,9 @@ function editarBeneficiario(element) {
     const id = $(element).data('id');
     const cpf = $(element).data('cpf');
     const nome = $(element).data('nome');
-    console.log("ID:", id)
+
     $('#IDBENEFICIARIO').val(id);
-    $('#cpfBeneficiario').val(cpf);
+    $('#cpfBeneficiario').val(formatarCPF(cpf));
     $('#nomeBeneficiario').val(nome);
     toggleButtons(true);
 }
@@ -86,10 +84,9 @@ function carregarBeneficiarios(idCliente) {
             tabela.empty();
 
             data.forEach(function (beneficiario) {
-                console.log("BENEFICIARIO:", beneficiario)
                 const row = `
                     <tr>
-                        <td>${beneficiario.CPF}</td>
+                        <td>${formatarCPF(beneficiario.CPF)}</td>
                         <td>${beneficiario.Nome}</td>
                         <td>
                         <button class="btn btn-primary btn-sm"
@@ -110,4 +107,28 @@ function carregarBeneficiarios(idCliente) {
             alert("Não foi possível carregar os beneficiários.");
         }
     });
+}
+
+
+function deletarBeneficiario(id) {
+    if (confirm("Deseja realmente excluir este beneficiario?")) {
+        $.ajax({
+            url: `/Beneficiario/Excluir/${id}`,
+            method: 'POST',
+            success: function () {
+                alert("Beneficiario excluido com sucesso!");
+
+                const idCliente = $('#IDCLIENTE').val();
+                carregarBeneficiarios(idCliente);
+            },
+            error: function () {
+                alert("Erro ao excluir beneficiario.");
+            }
+        });
+    }
+}
+
+function formatarCPF(cpf) {
+    cpf = cpf.toString().replace(/\D/g, "");
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 }

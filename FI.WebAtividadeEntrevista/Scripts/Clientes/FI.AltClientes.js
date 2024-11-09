@@ -1,9 +1,11 @@
 ﻿
 $(document).ready(function () {
     if (obj) {
+        const cpfFormtado = formatarCPFCliente(obj.CPF)
+        console.log("UPDATE:", cpfFormtado)
         $('#formCadastro #Nome').val(obj.Nome);
         $('#formCadastro #CEP').val(obj.CEP);
-        $('#formCadastro #CPF').val(obj.CPF);
+        $('#formCadastro #CPF').val(cpfFormtado);
         $('#formCadastro #Email').val(obj.Email);
         $('#formCadastro #Sobrenome').val(obj.Sobrenome);
         $('#formCadastro #Nacionalidade').val(obj.Nacionalidade);
@@ -71,4 +73,9 @@ function ModalDialog(titulo, texto) {
 
     $('body').append(texto);
     $('#' + random).modal('show');
+}
+
+function formatarCPFCliente(cpf) {
+    cpf = cpf.toString().replace(/\D/g, "");
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 }
