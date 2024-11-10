@@ -85,21 +85,21 @@ function carregarBeneficiarios(idCliente) {
 
             data.forEach(function (beneficiario) {
                 const row = `
-                    <tr>
-                        <td>${formatarCPF(beneficiario.CPF)}</td>
-                        <td>${beneficiario.Nome}</td>
-                        <td>
-                        <button class="btn btn-primary btn-sm"
-                                onclick="editarBeneficiario(this)"
-                                data-id="${beneficiario.Id}" 
-                                data-cpf="${beneficiario.CPF}" 
-                                data-nome="${beneficiario.Nome}"
-                                data-IdCliente="${beneficiario.IdCliente}">
-                            Editar
-                        </button>
-                        <button class="btn btn-danger btn-sm" onclick="deletarBeneficiario(${beneficiario.Id})">Excluir</button>
-                        </td>
-                    </tr>`;
+                        <tr>
+                            <td class="text-center">${formatarCPF(beneficiario.CPF)}</td>
+                            <td class="text-center">${beneficiario.Nome}</td>
+                            <td class="text-center">
+                                <button class="btn btn-primary btn-sm"
+                                        onclick="editarBeneficiario(this)"
+                                        data-id="${beneficiario.Id}" 
+                                        data-cpf="${beneficiario.CPF}" 
+                                        data-nome="${beneficiario.Nome}"
+                                        data-IdCliente="${beneficiario.IdCliente}">
+                                    Alterar
+                                </button>
+                                <button class="btn btn-primary btn-sm" onclick="deletarBeneficiario(${beneficiario.Id})">Excluir</button>
+                            </td>
+                        </tr>`;
                 tabela.append(row);
             });
         },

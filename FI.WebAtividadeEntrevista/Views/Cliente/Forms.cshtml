@@ -9,26 +9,22 @@
                 <form id="formCadastroBeneficiario" method="post" data-urlpost="@Url.Action("AdicionarBeneficiario", "Beneficiario")">
                     <input type="hidden" id="IDCLIENTE" name="IDCLIENTE" value="@(Model?.Id ?? 0)" />
                     <input type="hidden" id="IDBENEFICIARIO" name="IDBENEFICIARIO" value="0" />
-                    <div class="row">
-                        <div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="CPF">CPF</label>
-                                    <input required="required" type="text" class="form-control" id="cpfBeneficiario" name="cpfBeneficiario" placeholder="Ex.: 000.000.000-00" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="Nome">Nome</label>
-                                    <input required="required" type="text" class="form-control" id="nomeBeneficiario" name="cpfBeneficiario" placeholder="Ex.: João da Silva" />
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form-group">
                         <div class="row">
-                            <div class="col-lg-10">
-                                <button type="button" id="incluirBtn" class="btn btn-sm btn-success">Incluir</button>
-                                <button type="button" id="salvarBtn" class="btn btn-sm btn-success" style="display: none;">Salvar</button>
-                                <button type="button" id="cancelarBtn" class="btn btn-sm btn-danger" style="display: none;">Cancelar</button>
+                            <div class="col-md-4">
+                                <label for="CPF">CPF</label>
+                                <input required="required" type="text" class="form-control" id="cpfBeneficiario" name="cpfBeneficiario" placeholder="Ex.: 000.000.000-00" />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Nome">Nome</label>
+                                <input required="required" type="text" class="form-control" id="nomeBeneficiario" name="nomeBeneficiario" placeholder="Ex.: João da Silva" />
+                            </div>
+                            <div>
+                                <div style="margin-top: 25px">
+                                    <button type="button" id="incluirBtn" class="btn btn-sm btn-success">Incluir</button>
+                                    <button type="button" id="salvarBtn" class="btn btn-sm btn-success ml-2" style="display: none;">Salvar</button>
+                                    <button type="button" id="cancelarBtn" class="btn btn-sm btn-danger ml-2" style="display: none;">Cancelar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -36,9 +32,9 @@
                 <table class="table mt-3" id="tabelaBeneficiarios">
                     <thead>
                         <tr>
-                            <th>CPF</th>
-                            <th>Nome</th>
-                            <th>Ações</th>
+                            <th style="text-align: center;">CPF</th>
+                            <th style="text-align: center;">Nome</th>
+                            <th style="text-align: center;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,6 +45,7 @@
         </div>
     </div>
 </div>
+
 
 
 <form id="formCadastro" method="post">
