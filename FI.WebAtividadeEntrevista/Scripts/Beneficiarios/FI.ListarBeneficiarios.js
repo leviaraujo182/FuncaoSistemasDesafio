@@ -14,12 +14,12 @@ $(document).ready(function () {
                 "CPF": $('#cpfBeneficiario').val(),
                 "IDCLIENTE": $('#IDCLIENTE').val()
             },
-            success: function () {
+            success: function (r) {
                 ModalDialog("Sucesso!", "Beneficiario cadastrado com sucesso!")
                 $('#formCadastroBeneficiario')[0].reset();
                 carregarBeneficiarios($('#IDCLIENTE').val());
             },
-            error: function (e) {
+            error: function (r) {
                 ModalDialog("Ocorreu um erro", r.responseJSON.mensagem || r.responseJSON)
             }
         });
@@ -51,8 +51,7 @@ $(document).ready(function () {
                 toggleButtons(false);
                 carregarBeneficiarios($('#IDCLIENTE').val());
             },
-            error: function (r) {
-                console.log(r)
+            error: function () {
                 ModalDialog("Ocorreu um erro", r.responseJSON.mensagem || r.responseJSON);
             }
         });
