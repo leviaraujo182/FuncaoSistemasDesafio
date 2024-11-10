@@ -40,8 +40,10 @@ namespace WebAtividadeEntrevista.Controllers
                 bool existeClienteCPF = bo.VerificarExistencia(model.CPF);
 
                 if (existeClienteCPF)
-                    return Json("Já existe um cliente com este CPF cadastrado");
-
+                {
+                    Response.StatusCode = 400;
+                    return Json(new { mensagem = "Já existe um cliente com este CPF cadastrado." });
+                }
 
                 model.Id = bo.Incluir(new Cliente()
                 {                    
@@ -82,6 +84,19 @@ namespace WebAtividadeEntrevista.Controllers
             }
             else
             {
+                Cliente cliente = bo.Consultar(model.Id);
+
+                if(cliente.CPF != model.CPF)
+                {
+                    bool existeClienteCPF = bo.VerificarExistencia(model.CPF);
+
+                    if (existeClienteCPF)
+                    {
+                        Response.StatusCode = 400;
+                        return Json(new { mensagem = "Já existe um cliente com este CPF." });
+                    }
+                }
+
                 bo.Alterar(new Cliente()
                 {
                     Id = model.Id,

@@ -2,7 +2,6 @@
 $(document).ready(function () {
     if (obj) {
         const cpfFormtado = formatarCPFCliente(obj.CPF)
-        console.log("UPDATE:", cpfFormtado)
         $('#formCadastro #Nome').val(obj.Nome);
         $('#formCadastro #CEP').val(obj.CEP);
         $('#formCadastro #CPF').val(cpfFormtado);
@@ -36,7 +35,7 @@ $(document).ready(function () {
             error:
             function (r) {
                 if (r.status == 400)
-                    ModalDialog("Ocorreu um erro", r.responseJSON);
+                    ModalDialog("Ocorreu um erro", r.responseJSON.mensagem);
                 else if (r.status == 500)
                     ModalDialog("Ocorreu um erro", "Ocorreu um erro interno no servidor.");
             },
