@@ -15,12 +15,12 @@ $(document).ready(function () {
                 "IDCLIENTE": $('#IDCLIENTE').val()
             },
             success: function () {
-                alert("Beneficiario incluido com sucesso!");
+                ModalDialog("Sucesso!", "Beneficiario cadastrado com sucesso!")
                 $('#formCadastroBeneficiario')[0].reset();
                 carregarBeneficiarios($('#IDCLIENTE').val());
             },
             error: function (e) {
-                alert(e.responseJSON.mensagem);
+                ModalDialog("Ocorreu um erro", r.responseJSON.mensagem || r.responseJSON)
             }
         });
     });
@@ -46,13 +46,14 @@ $(document).ready(function () {
                 Nome: nome,
             },
             success: function () {
-                alert("Beneficiario atualizado com sucesso!");
+                ModalDialog("Sucesso!", "Beneficiario atualizado com sucesso!");
                 $('#formCadastroBeneficiario')[0].reset();
                 toggleButtons(false);
                 carregarBeneficiarios($('#IDCLIENTE').val());
             },
-            error: function () {
-                alert("Erro ao atualizar beneficiário.");
+            error: function (r) {
+                console.log(r)
+                ModalDialog("Ocorreu um erro", r.responseJSON.mensagem || r.responseJSON);
             }
         });
     });
@@ -104,7 +105,7 @@ function carregarBeneficiarios(idCliente) {
             });
         },
         error: function () {
-            alert("Não foi possível carregar os beneficiários.");
+            ModalDialog("Ocorreu um erro", "Não foi possível carregar a lista de beneficiarios");
         }
     });
 }
@@ -116,13 +117,13 @@ function deletarBeneficiario(id) {
             url: `/Beneficiario/Excluir/${id}`,
             method: 'POST',
             success: function () {
-                alert("Beneficiario excluido com sucesso!");
+                ModalDialog("Sucesso!", "Beneficiario removido com sucesso!");
 
                 const idCliente = $('#IDCLIENTE').val();
                 carregarBeneficiarios(idCliente);
             },
             error: function () {
-                alert("Erro ao excluir beneficiario.");
+                ModalDialog("Ocorreu um erro", r.responseJSON.mensagem || r.responseJSON);
             }
         });
     }
@@ -131,4 +132,28 @@ function deletarBeneficiario(id) {
 function formatarCPF(cpf) {
     cpf = cpf.toString().replace(/\D/g, "");
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+}
+
+function ModalDialog(titulo, texto) {
+    var random = Math.random().toString().replace('.', '');
+    var modalHtml = '<div id="' + random + '" class="modal fade">                                                               ' +
+        '        <div class="modal-dialog">                                                                                 ' +
+        '            <div class="modal-content">                                                                            ' +
+        '                <div class="modal-header">                                                                         ' +
+        '                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>         ' +
+        '                    <h4 class="modal-title">' + titulo + '</h4>                                                    ' +
+        '                </div>                                                                                             ' +
+        '                <div class="modal-body">                                                                           ' +
+        '                    <p>' + texto + '</p>                                                                           ' +
+        '                </div>                                                                                             ' +
+        '                <div class="modal-footer">                                                                         ' +
+        '                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>             ' +
+        '                                                                                                                   ' +
+        '                </div>                                                                                             ' +
+        '            </div><!-- /.modal-content -->                                                                         ' +
+        '  </div><!-- /.modal-dialog -->                                                                                    ' +
+        '</div> <!-- /.modal -->                                                                                        ';
+
+    $('body').append(modalHtml);
+    $('#' + random).modal('show');
 }

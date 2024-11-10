@@ -11,9 +11,7 @@ $(document).ready(function (e) {
                 "IDCLIENTE": $(this).find("#IDCLIENTE").val()
             },
             error: function (r) {
-                console.log("BATEU AQUI")
                 if (r.status === 400) {
-                    // Captura a mensagem de erro do JSON retornado
                     const errorMessage = r.responseJSON.mensagem || "Ocorreu um erro";
                     ModalDialog("Ocorreu um erro", errorMessage);
                 } else if (r.status === 500) {
@@ -21,7 +19,7 @@ $(document).ready(function (e) {
                 }
             },
             success: function (r) {
-                ModalDialog("Sucesso!", r.mensagem); // Exibe a mensagem de sucesso
+                ModalDialog("Sucesso!", r.mensagem);
                 $('#modalBeneficiarios').modal('hide');
                 $('#formCadastroBeneficiario')[0].reset();
             }
