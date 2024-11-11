@@ -26,7 +26,7 @@
                 ModalDialog("Sucesso!", "Cliente cadastrado com sucesso!");
 
                 $("#formCadastro")[0].reset();
-                console.log("r:", r);
+
                 const idCliente = r.IdCliente;
        
                 $('#formCadastroBeneficiario').find('#IDCLIENTE').val(idCliente);
